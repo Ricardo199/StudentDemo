@@ -9,31 +9,36 @@ namespace StudentDemo
     internal class Student
     {
         private int id;
-        private string name;
+        //private string name;
 
         public Student(int id, string name) {
-            this.id = id;
-            this.name = name;
+            Id = id;
+            Name = name;
         }
 
-        public int Id
-        {
-            get { return id; }
+        public int Id {
+            get { 
+                return id; 
+            }
             set {
-                if (value < 0)
-                {
+                if (value < 0){
                     Console.WriteLine("Id cannot be less than one");
                 }
-                else
-                {
+                else{
                     id = value;
                 }
             }
         }
-        public string Name { 
-            get { return name; }
-            set { name = value; }
-        }
+        //public string Name { 
+        //    get { 
+        //        return name; 
+        //    }
+        //    set { 
+        //        name = value; 
+        //    }
+        //}
+
+        public string Name { get; set; }
 
         public void SayHi() {
             Console.WriteLine($"Hi, my name is: {Name}, and my id is: {Id}.");

@@ -11,11 +11,13 @@ namespace StudentDemo
     {
         static void Main()
         {
-            Student student= new Student();
+            string name;
+            int id;
             Console.WriteLine("Please enter your name ");
-            student.Name= Console.ReadLine();
+            name= Console.ReadLine();
             Console.WriteLine("Please enter your id");
-            student.Id= int.Parse(Console.ReadLine());
+            id= int.Parse(Console.ReadLine());
+            Student student = new Student(id, name);
             student.SayHi();
             Console.ReadLine();
         }
