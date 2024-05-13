@@ -11,9 +11,19 @@ namespace StudentDemo
         private int id;
         private string name;
 
-        public int Id { 
+        public int Id
+        {
             get { return id; }
-            set { id = value; }
+            set {
+                if (value < 0)
+                {
+                    Console.WriteLine("Id cannot be less than one");
+                }
+                else
+                {
+                    id = value;
+                }
+            }
         }
         public string Name { 
             get { return name; }
